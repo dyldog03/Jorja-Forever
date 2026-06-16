@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Will You Be My Forever? ❤️</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ffd6e7;
+font-family:Arial,sans-serif;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+}
+
+img{
+width:220px;
+margin-bottom:20px;
+}
+
+h1{
+color:#d6336c;
+}
+
+p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.buttons{
+position:relative;
+height:200px;
+}
+
+button{
+font-size:22px;
+padding:14px 30px;
+border:none;
+border-radius:15px;
+cursor:pointer;
+}
+
+#yes{
+background:#ff4d6d;
+color:white;
+margin-right:40px;
+}
+
+#no{
+background:#666;
+color:white;
+position:absolute;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="https://em-content.zobj.net/source/apple/391/kissing-face_1f617.png">
+
+<h1>😘 Will You Be My Forever? ❤️</h1>
+
+<p>I only have one question for you...</p>
+
+<div class="buttons">
+
+<button id="yes">
+Yes ❤️
+</button>
+
+<button id="no">
+No
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("yes").onclick=function(){
+
+window.location.href="forever.html";
+
+};
+
+const noButton=document.getElementById("no");
+
+function moveButton(){
+
+const x=Math.random()*(window.innerWidth-120);
+
+const y=Math.random()*(window.innerHeight-80);
+
+noButton.style.left=x+"px";
+
+noButton.style.top=y+"px";
+
+}
+
+noButton.addEventListener("mouseover",moveButton);
+
+noButton.addEventListener("touchstart",function(e){
+
+e.preventDefault();
+
+moveButton();
+
+});
+
+</script>
+
+</body>
+
+</html>
