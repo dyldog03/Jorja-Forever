@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forever ❤️</title>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ffebf3;
+font-family:Arial,sans-serif;
+}
+
+.container{
+text-align:center;
+z-index:2;
+}
+
+h1{
+font-size:50px;
+color:#d6336c;
+}
+
+p{
+font-size:28px;
+}
+
+.heart{
+position:absolute;
+bottom:-50px;
+font-size:30px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️🥹</h1>
+
+<p>You just made me the happiest person ❤️</p>
+
+<h2>Forever starts now 💍❤️</h2>
+
+</div>
+
+<script>
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*3+3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},6000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+
+</html>
